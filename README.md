@@ -120,9 +120,9 @@ This project is a web application developed to demonstrate the integration of fr
 -> Run the PSql command to connect database via gcloud shell: <br> 
       ```bash
        psql -h [Database-HostIP] -U postgres -d postgres #Enter the public IP of PostgreSQL database
-       ```
+       
  -> This will prompt to enter database password -- Enter Database password <br>
  -> Check the database by running this command. <br>
-     ```bash
-         Select  * from [Schema][Name]; # Enter the schema i.e name of schema where table resides and Name is the database table name
-       ```
+ 
+        Select  * from [Schema][Name]; # Enter the schema i.e name of schema where table resides and Name is the database table name
+    
