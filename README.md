@@ -43,6 +43,16 @@ This project is a web application developed to demonstrate the integration of fr
 
 ### Setup
 
+1. **Develop FrontEnd of Webapp:** <br><br>
+-> Create the HTML file (index.html)to capture the data.
+-> Create Javascript file (script.js)
+-> Enhance the webpage usign style sheets (styles.css)
+
+1. **Develop Backend application :** <br><br>
+-> Create the python application to connect frontend  (index.html)to capture the data.
+-> Create Javascript file (script.js)
+-> Enhance the webpage usign style sheets (styles.css)
+  
 1. **Push the local repository to Github :** <br><br>
  -> Open Git Bash and loacte the project directory and run following commands to initialize, add and push code to Github repo
    ```sh
@@ -123,6 +133,18 @@ This project is a web application developed to demonstrate the integration of fr
        
  -> This will prompt to enter database password -- Enter Database password <br>
  -> Check the database by running this command. <br>
- 
-        Select  * from [Schema][Name]; # Enter the schema i.e name of schema where table resides and Name is the database table name
+      Select  * from [Schema][Name]; # Enter the schema i.e name of schema where table resides and Name is the database table name
     
+## Troubleshooting
+
+1. **Curl Command:** <br><br>
+-> This command sends a POST request to the URL http://[namespace].default.svc.cluster.local:5000/submit with a JSON payload.
+   ```bash
+       curl -X POST http://[ExternalIP / DNS]:[targetPort]/submit -H "Content-Type: application/json" -d '{"value1": "test1", "value2": "test2"}'
+2. **Pod Deployment error:** <br><br>
+-> To check the ImagePullOFF / CrashbackOFF error verify the pods using kubectl command. <br>
+```bash
+       kubectl logs -f [pod-name]
+       kubectl exec -it [pod-name] -- /bin/bash
+       kubectl decribe pods [pod-name]
+       kubectl exec -it [pod-name] -- nslookup [ExternalIP]
