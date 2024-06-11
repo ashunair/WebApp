@@ -44,9 +44,9 @@ This project is a web application developed to demonstrate the integration of fr
 ### Setup
 
 1. **Develop FrontEnd of Webapp:** <br><br>
--> Create the HTML file (index.html)to capture the data.
--> Create Javascript file (script.js)
--> Enhance the webpage usign style sheets (styles.css)
+-> Create the HTML file (index.html)to capture the data. <br>
+-> Create Javascript file (script.js) <br>
+-> Enhance the webpage usign style sheets (styles.css) <br>
 
 2. **Develop Backend application :** <br><br>
 -> Create the python application (app.py) to connect frontend to capture the data from frontend and load to database. <br>
