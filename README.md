@@ -49,7 +49,7 @@ This project is a web application developed to demonstrate the integration of fr
 -> Enhance the webpage usign style sheets (styles.css)
 
 2. **Develop Backend application :** <br><br>
--> Create the python application (app.py) to connect frontend to capture the data from frontend and load to database.
+-> Create the python application (app.py) to connect frontend to capture the data from frontend and load to database. <br>
 -> Create requirements.txt to install pre-requisite libraries <br>
    Flask <br>
    Flask-SQLAlchemy <br>
