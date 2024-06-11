@@ -10,10 +10,7 @@ This project is a web application developed to demonstrate the integration of fr
 - [Getting Started](#getting-started)
 - [Deployment](#deployment)
 - [Version Control](#version-control)
-- [Screenshots](#screenshots)
-- [Challenges](#challenges)
-- [Contributing](#contributing)
-- [License](#license)
+- [Troubleshooting](#troubleshooting)
 
 
 ## Features
