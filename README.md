@@ -48,12 +48,18 @@ This project is a web application developed to demonstrate the integration of fr
 -> Create Javascript file (script.js)
 -> Enhance the webpage usign style sheets (styles.css)
 
-1. **Develop Backend application :** <br><br>
--> Create the python application to connect frontend  (index.html)to capture the data.
--> Create Javascript file (script.js)
--> Enhance the webpage usign style sheets (styles.css)
+2. **Develop Backend application :** <br><br>
+-> Create the python application (app.py) to connect frontend to capture the data from frontend and load to database.
+-> Create requirements.txt to install pre-requisite libraries <br>
+   Flask <br>
+   Flask-SQLAlchemy <br>
+   psycopg2-binary <br>
+   flask_cors <br>
+-> Run the file in local machine
+   ```sh
+    python app.py
   
-1. **Push the local repository to Github :** <br><br>
+3. **Push the local repository to Github :** <br><br>
  -> Open Git Bash and loacte the project directory and run following commands to initialize, add and push code to Github repo
    ```sh
    git init
@@ -63,13 +69,13 @@ This project is a web application developed to demonstrate the integration of fr
    git push -u origin main #Push the changes made in code to Github main branch
    
 
-3. **Clone Github repository to Google Source Repository :** <br><br>
+4. **Clone Github repository to Google Source Repository :** <br><br>
 -> Open Google Cloud shell and connect the terminal and set configuration to your project
    ```sh
    gcloud config set project [ProjectID] #Config your project id
    git clone <GithubRepo_URL>
    
-4. **Create and intialize a container:** <br><br>
+5. **Create and intialize a container:** <br><br>
 -> Enable Required APIs: Enable the *Google Kubernetes Engine (GKE)* API. <br>
 -> Create a Cluster. <br>
 -> Configure kubectl to use GKE Cluster <br>
