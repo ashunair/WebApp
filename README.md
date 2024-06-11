@@ -9,7 +9,7 @@ This project is a web application developed to demonstrate the integration of fr
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Deployment](#deployment)
-- [Version Control](#version-control)
+- [Database Connection](#database-connection)
 - [Troubleshooting](#troubleshooting)
 
 
@@ -108,4 +108,21 @@ This project is a web application developed to demonstrate the integration of fr
      kubectl get services
      ```
 
+## Database Connection
 
+1. **Connect PostgreSQL with application:** <br><br>
+-> Prerequisite - Verify the python application app.py backend in configured with PostgreSQL database credentials correctly. <br>
+
+2. **Collect Form Data:** <br><br>
+-> The backend Flask application will handle POST requests to collect data from the frontend form and insert it into the PostgreSQL database. <br>
+-> Once you have External IP address , update the javascript file and append the External IP or DNS to trigger the fetch function.<br>
+-> Delete the deployment file for both backend and frontend and reapply the kubectl deployment file. <br>
+-> Run the PSql command to connect database via gcloud shell: <br> 
+      ```bash
+       psql -h [Database-HostIP] -U postgres -d postgres #Enter the public IP of PostgreSQL database
+       ```
+ -> This will prompt to enter database password -- Enter Database password <br>
+ -> Check the database by running this command. <br>
+     ```bash
+         Select  * from [Schema][Name]; # Enter the schema i.e name of schema where table resides and Name is the database table name
+       ```
