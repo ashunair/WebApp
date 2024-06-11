@@ -83,5 +83,32 @@ This project is a web application developed to demonstrate the integration of fr
      gcloud container clusters get-credentials [CLUSTER_NAME] --zone [ZONE]
     ```
 
+## Deployment
+
+1. **Push the image to Artifact Registry using Docker:** <br><br>
+-> Build the docker image for both frontend and backend. <br>
+-> Push the docker image for both frontend and backend. <br>
+   ```bash
+   docker build -t gcr.io/[Project-ID]/[Tag-Name]:latest .
+   ```
+   ```bash
+   docker push gcr.io/[Project-ID]/[Tag-Name]:latest .
+   ``` 
+2. **Deploy configuration file:** <br><br>
+-> Create and apply a deployment configuration file for both frontend and backend. <br>
+-> Create and apply a service configuration file for both frontend and backend. <br>
+   ```bash
+   kubectl apply -f <Deployment-File> # Deployment YAML file for backend and frontend
+   ```
+   ```bash
+   kubectl apply -f <Service-File> #Service YAML file for backend and frontend
+   ```
+3. **Verify Deployment Status:** <br><br>
+-> Check the status of your deployment and services with the commands. <br>
+    ```bash
+     kubectl get deployments
+     kubectl get pods
+     kubectl get services
+     ```
 
 
