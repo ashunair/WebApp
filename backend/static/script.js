@@ -9,7 +9,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
         return;
     }
 
-    fetch('http://backend-service.default.svc.cluster.local:5000/submit', {
+    fetch('http://35.238.201.192:5000/submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

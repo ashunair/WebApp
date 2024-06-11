@@ -10,7 +10,7 @@ CORS(app)  # Enable CORS for all routes
 logging.basicConfig(level=logging.INFO)
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ashuuser:Ashu123@34.72.51.3/ashudb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Ashu123@34.72.51.3/pstgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database

@@ -1,20 +1,56 @@
-<!-- frontend/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Application</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="dataForm">
-        <label for="value1">Value 1:</label>
-        <input type="text" id="value1" name="value1" required>
-        <label for="value2">Value 2:</label>
-        <input type="text" id="value2" name="value2" required>
-        <button type="submit">Submit</button>
-    </form>
-    <script src="scripts.js"></script>
+	
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="image.jpg" alt="Profile Picture">
+        <p>Hello! I'm Ashwathy, a Lambton student specializing in DevOps practices. I love automating boring tasks.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <a href="https://github.com/ashunair/CICD-Pipeline.git" target="_blank">Google CI/CD</a>
+        </div>
+        <div class="project">
+            <a href="https://github.com/ashunair/Nginx-revrese-proxy.git" target="_blank">Nginx-revrese-proxy</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="dataForm">
+            <label for="value1">Name:</label>
+            <input type="text" id="value1" name="value1">
+            <label for="value2">Email:</label>
+            <input type="text" id="value2" name="value2">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ashwathy. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

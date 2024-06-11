@@ -21,8 +21,8 @@ spec:
             - name: PGHOST
               value: "34.72.51.3"
             - name: PGDATABASE
-              value: "ashudb"
+              value: "postres"
             - name: PGUSER
-              value: "ashuuser"
+              value: "postgres"
             - name: PGPASSWORD
               value: "Ashu123"
