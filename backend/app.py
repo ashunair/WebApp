@@ -3,14 +3,14 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import logging
 
-app = Flask(__name__, static_url_path='', static_folder='static')
+app = Flask(__name__, static_url_path='', static_folder='../frontend')
 CORS(app)  # Enable CORS for all routes
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ashuuser:Ashu123@34.72.51.3/ashudb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Ashu123@34.72.51.3/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize the database
