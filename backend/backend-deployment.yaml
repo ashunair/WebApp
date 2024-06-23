@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -26,3 +27,33 @@ spec:
               value: "postgres"
             - name: PGPASSWORD
               value: "Ashu123"
+=======
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: gcr.io/regal-scholar-423322-h0/my-backend:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: PGHOST
+              value: "34.72.51.3"
+            - name: PGDATABASE
+              value: "postres"
+            - name: PGUSER
+              value: "postgres"
+            - name: PGPASSWORD
+              value: "Ashu123"
+>>>>>>> 7529e2aa1f199b5c6f20bb9f605c915f2f5684a9
