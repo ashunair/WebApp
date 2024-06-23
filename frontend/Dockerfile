@@ -1,26 +1,14 @@
-# Use the official Node.js image from the Docker Hub
-FROM node:18-slim
+# Use an official Nginx image
+FROM nginx:latest
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /usr/share/nginx/html
 
-# Copy the package.json and package-lock.json into the container
-COPY package*.json ./
+# Copy the frontend files into the container
+COPY . /usr/share/nginx/html
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code into the container
-COPY . .
-
-# Build the React application
-RUN npm run build
-
-# Install serve to serve the build folder
-RUN npm install -g serve
-
-# Expose port 3000 to the outside world
+# Expose the port the app runs on
 EXPOSE 3000
 
-# Command to run the application
-CMD ["serve", "-s", "build"]
+# Run Nginx
+CMD ["nginx", "-g", "daemon off;"]

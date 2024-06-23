@@ -1,0 +1,104 @@
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('bg.jpg'); /* Path to your background image */
+    background-size: 1280px 780px;; /* Cover the entire viewport */
+    /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    /* Hide overflow to prevent scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    flex: 1 0 auto;
+    overflow-y: auto;
+    padding: 1rem; /* Add some padding for better spacing */
+}
+
+section {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners */
+    margin: 1rem auto; /* Center sections and add spacing */
+    width: 90%;
+    max-width: 1200px; /* Limit width for better readability */
+}
+
+#about img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #3a2472;
+    line-height: 1.3;
+    margin-top: 1.3rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #755b8f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #f1f1f1;
+    flex-shrink: 0;
+}
