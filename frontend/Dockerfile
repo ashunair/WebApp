@@ -1,14 +1,21 @@
-# Use an official Nginx image
-FROM nginx:latest
+# Use the official Node.js image as the base image
+FROM node:14
 
-# Set the working directory in the container
-WORKDIR /usr/share/nginx/html
+# Create and set the working directory
+WORKDIR /app
 
-# Copy the frontend files into the container
-COPY . /usr/share/nginx/html
+# Copy the package.json and package-lock.json files to the working directory
+COPY package*.json ./
 
-# Expose the port the app runs on
+# Install the dependencies
+RUN npm install
+
+# Copy the rest of the application code to the working directory
+COPY . .
+
+# Expose the port that the application will run on
 EXPOSE 3000
 
-# Run Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the Node.js application
+CMD ["node", "server.js"]
+ls

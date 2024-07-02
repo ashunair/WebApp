@@ -9,11 +9,7 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
         return;
     }
 
-<<<<<<< HEAD
     fetch('http://34.71.199.89:5000/submit', {
-=======
-    fetch('http://35.238.201.192:5000/submit', {
->>>>>>> 7529e2aa1f199b5c6f20bb9f605c915f2f5684a9
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
