@@ -26,6 +26,7 @@ class Data(db.Model):
 # Route to serve HTML file
 @app.route('/')
 def index():
+
     return send_from_directory(app.static_folder, 'index.html')
 
 # Route to check health
