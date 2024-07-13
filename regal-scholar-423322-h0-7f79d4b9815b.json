@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "regal-scholar-423322-h0",
+  "private_key_id": "7f79d4b9815bbaebe274fc69ccf09d5c069dd94d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCYsXcs4dzFBmxZ\nZIBb+cXswFvA0H71GF3Zej9olQKhXv/U2vOchTI85apY/dvAoju605MfI4nqpukr\nG0qdj+WjFUXg2LgDUfuATSofqfzgiHMoQMe/YVSzoDfDPOqTPq8iPSqIr1YfFt7f\nPEAMedM8ceyYwRKOTFDkpHVvjaEENN6ENUWOh+LQkMq4eOHhTMoWHbOPW3DjgC4w\n8FaqRsJaSK7EI6F4G+qonSYbpG8n/M+VbpE3WyQOuAk9B/8oS55T3IuoYxRyNVMN\n/VadnLHwNd+Gb4LDNaCDlRo6M/ww2YSA5gX94JIYTvMoMsxyg3YX85xN/ZOlFx5w\njmKstGsxAgMBAAECggEAJOhYdxfNBi6sR9s8D39LMRO52dxLo7CVFrku1HeYICtX\nSTr3QXEMmJ2m1EXgNSrBp0H2wMMVVgusNogtO/KJPicpMdUQfXT2hqegM/Eht6Aj\nvaoS3haHo7dpYx65UIgJSwxf2JQRDAi6LFli3eEghu6+kpmwg4a80tdRr3obXmmN\nNgbpBe1gKr1Dq1w62LXMhDYxMYLZlBVqdxXGWNiKp1De+tUQA8K6zIV8h/+v9ePr\n4DZFYl0paNcLfdPFv7yRg501dL0XoA4ueE0ulBFJMvJM8fbWNRC/zD2R0hYBm4ob\njrgMZXNtxxXtt5+Ju2kH/4j4klFuZuCoj1V/LJJk9QKBgQDVnUzvuQRq2YPI1fDd\nviobetzxpgNK+cD3Zn/XssBi2qikA7OUraIKsFTekVjTHKkhUntpjtwY7PzP79JZ\n0g0mMNEnYDFU4cAAH0S11acgQbOXp4iNQvGBIzc+SDV3IeyIfKFoqYT1N08SwVxQ\n9QjfviyXhFJ5CCaIQa1qQL2IgwKBgQC2/aCdHv1E/h9HRLVkSzQNEKHPu82V8Hxp\n1YFs34c4swHjvqzt7VKMD1rlRqTAhomD82/0HJ4TUz1064v7i6ItFYnpcjgcFNET\nSMYPN/RSBXYEQCC6+AyUr7WPzVhDtlJf3BEb4AVDV0R7QoEyejfeqQNovIN7klZk\nLq8XML4nOwKBgQCs+BlTR4J/LrAaULogI5qe88ayWVXzQPbynWnJc/F6WkoRvPmN\n22cJtqySKCk/kMaWt948pDQubr9rdGrk1kRVd1P0yVxIuh+pOah+gIk6glj05PCa\nSemaQrS51uiMFckc36YnRJTnpqh9rFqfJzrPSYN8EOZjIKlqzZupHNEcFwKBgQCG\nOyI4X2UV2PuEwef1fBzggJTR10eFd3UsBUv9WzLL6rO2Jkaf+XiV+SWKDfoIqCfz\nvP0gqmVic6sfOzHiAZmjTKtvrTNvle2QIc/3leoIyKy7jXb078P6xbF/nPfkI7fl\nTX7XXcs+jKNVb4FqT7DwCjbP+4jPepcYwg36Cu1RxQKBgQDAL42HBSS86atckLv2\nYptlukJCVomlk4/eT3VDXratw3IbM6BLOu1sLp4wsvzz9E4WOc/wbbY+EOrCIIoK\n9wr4aBkmQ5BXFcwX9jGKz0q8ixpiSx4k6LWhFMzop/Vz/brHpaLej+pMZoFvYAm4\nzWm3AeTJHnU+P10ijxXdyAgJ9g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "storageaccountgcp@regal-scholar-423322-h0.iam.gserviceaccount.com",
+  "client_id": "118357894987822206872",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/storageaccountgcp%40regal-scholar-423322-h0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

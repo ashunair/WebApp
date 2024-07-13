@@ -144,7 +144,7 @@ resource "kubernetes_deployment" "frontend" {
     }
     annotations = {
       "kubectl.kubernetes.io/restartedAt" = timestamp()  # Forces a redeploy
-    }g
+    }
   }
 
   spec {
