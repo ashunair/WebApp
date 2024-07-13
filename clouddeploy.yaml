@@ -1,0 +1,31 @@
+apiVersion: clouddeploy.googleapis.com/v1
+kind: DeliveryPipeline
+metadata:
+  name: webapp-pipeline
+description: Pipeline for deploying frontend and backend applications
+serialPipeline:
+  stages:
+    - targetId: dev
+      profiles: []
+      deploy:
+        artifact: {}
+        kubernetes:
+          manifests:
+            - /home/ashwathynairofficial/WebApp/frontend/frontend-deployment.yaml
+            - /home/ashwathynairofficial/WebApp/frontend/frontend-service.yaml
+            - /home/ashwathynairofficial/WebApp/backend/backend-deployment.yaml
+            - /home/ashwathynairofficial/WebApp/backend/backend-service.yaml
+    - targetId: prod
+      profiles: []
+      deploy:
+        artifact: {}
+        kubernetes:
+          manifests:
+            - /home/ashwathynairofficial/WebApp/frontend/frontend-deployment.yaml
+            - /home/ashwathynairofficial/WebApp/frontend/frontend-service.yaml
+            - /home/ashwathynairofficial/WebApp/backend/backend-deployment.yaml
+            - /home/ashwathynairofficial/WebApp/backend/backend-service.yaml
+      approval:
+        type: manual
+        approvers:
+          - email: comashwathynairofficial@gmail.com

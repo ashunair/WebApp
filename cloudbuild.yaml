@@ -1,0 +1,46 @@
+steps:
+  # Step 1: Create the GKE cluster
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: Create GKE Cluster
+    args: ['container', 'clusters', 'create', 'webapp-cluster', '--zone', 'us-central1-a', '--num-nodes', '1']
+  # Step 2: Push the frontend Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Push Frontend
+    args: ['push', 'gcr.io/regal-scholar-423322-h0/my-frontend:$SHORT_SHA']
+
+  # Step 3: Build the backend Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Build Backend
+    dir: 'backend'
+    args: ['build', '-t', 'gcr.io/regal-scholar-423322-h0/my-backend:$SHORT_SHA', '.']
+  
+  # Step 4: Push the backend Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: Push Backend
+    args: ['push', 'gcr.io/regal-scholar-423322-h0/my-backend:$SHORT_SHA']
+
+  # Step 5: Get credentials for the GKE cluster
+  - name: 'gcr.io/cloud-builders/gcloud'
+    id: Get Cluster Credentials
+    args: ['container', 'clusters', 'get-credentials', 'webapp-cluster', '--zone', 'us-central1-a']
+
+  # Step 6: Update the frontend Kubernetes deployment with the new image
+  - name: 'gcr.io/cloud-builders/kubectl'
+    id: Update Frontend Deployment
+    args: ['apply', '-f', 'frontend-deployment.yaml', 'frontend=gcr.io/regal-scholar-423322-h0/my-frontend:$SHORT_SHA']
+    dir: '/home/ashwathynairofficial/WebApp/frontend'
+
+  # Step 7: Update the backend Kubernetes deployment with the new image
+  - name: 'gcr.io/cloud-builders/kubectl'
+    id: Update Backend Deployment
+    args: ['apply', '-f', 'backend-deployment.yaml', 'backend=gcr.io/regal-scholar-423322-h0/my-backend:$SHORT_SHA']
+    dir: '/home/ashwathynairofficial/WebApp/backend'
+
+  # Step 8: Apply the Kubernetes service configurations
+  - name: 'gcr.io/cloud-builders/kubectl'
+    id: Apply Kubernetes Services
+    args: ['apply', '-f', '/home/ashwathynairofficial/WebApp/frontend/frontend-service.yaml', '-f', '/home/ashwathynairofficial/WebApp/backend/backend-service.yaml']
+
+images:
+  - 'gcr.io/regal-scholar-423322-h0/my-frontend:$SHORT_SHA'
+  - 'gcr.io/regal-scholar-423322-h0/my-backend:$SHORT_SHA'
