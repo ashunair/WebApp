@@ -44,3 +44,5 @@ steps:
 images:
   - 'gcr.io/regal-scholar-423322-h0/my-frontend:$SHORT_SHA'
   - 'gcr.io/regal-scholar-423322-h0/my-backend:$SHORT_SHA'
+options:
+  logging: CLOUD_LOGGING_ONLY
